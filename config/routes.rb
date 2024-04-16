@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   namespace 'api' do
   	namespace 'v1' do
   		resources :organizacoes
+      resources :participantes
+      resources :equipes
+      resources :projetos
+      resources :atividades
   	end
   end
 
