@@ -1,0 +1,225 @@
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(657270541364502345)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-04-16 16:23:29.330927', '2024-04-16 16:23:29.330936') RETURNING "key"[0m
+Migrating to CreateOrganizacaos (20240416162312)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "organizacaos" ("id" bigserial primary key, "nome" character varying, "descricao" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240416162312') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(657270541364502345)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.9ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Wings of the Dove"], ["descricao", "Quia occaecati excepturi magni."], ["created_at", "2024-04-16 16:28:04.278579"], ["updated_at", "2024-04-16 16:28:04.278579"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Man Within"], ["descricao", "Earum non similique id."], ["created_at", "2024-04-16 16:28:04.288754"], ["updated_at", "2024-04-16 16:28:04.288754"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.3ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "No Highway"], ["descricao", "Accusantium doloremque fugiat quasi."], ["created_at", "2024-04-16 16:28:04.295429"], ["updated_at", "2024-04-16 16:28:04.295429"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "No Longer at Ease"], ["descricao", "Et consequatur eos et."], ["created_at", "2024-04-16 16:28:04.302383"], ["updated_at", "2024-04-16 16:28:04.302383"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.6ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Waiting for the Barbarians"], ["descricao", "Id quae eius reiciendis."], ["created_at", "2024-04-16 16:28:04.309514"], ["updated_at", "2024-04-16 16:28:04.309514"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Dance Dance Dance"], ["descricao", "Ut dolorem voluptatum deleniti."], ["created_at", "2024-04-16 16:28:04.318120"], ["updated_at", "2024-04-16 16:28:04.318120"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Those Barren Leaves, Thrones, Dominations"], ["descricao", "Praesentium illo quo blanditiis."], ["created_at", "2024-04-16 16:28:04.326000"], ["updated_at", "2024-04-16 16:28:04.326000"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.8ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "To Sail Beyond the Sunset"], ["descricao", "Delectus sit beatae cupiditate."], ["created_at", "2024-04-16 16:28:04.332684"], ["updated_at", "2024-04-16 16:28:04.332684"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "No Longer at Ease"], ["descricao", "Fuga tempora assumenda id."], ["created_at", "2024-04-16 16:28:04.340298"], ["updated_at", "2024-04-16 16:28:04.340298"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.3ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Unweaving the Rainbow"], ["descricao", "Sit consequuntur iste repellat."], ["created_at", "2024-04-16 16:28:04.349066"], ["updated_at", "2024-04-16 16:28:04.349066"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.9ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "I Will Fear No Evil"], ["descricao", "Voluptatibus reprehenderit et possimus."], ["created_at", "2024-04-16 16:28:04.357434"], ["updated_at", "2024-04-16 16:28:04.357434"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "When the Green Woods Laugh"], ["descricao", "Et neque repudiandae numquam."], ["created_at", "2024-04-16 16:28:04.365707"], ["updated_at", "2024-04-16 16:28:04.365707"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "To Your Scattered Bodies Go"], ["descricao", "Perferendis aut enim est."], ["created_at", "2024-04-16 16:28:04.373874"], ["updated_at", "2024-04-16 16:28:04.373874"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.6ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Golden Bowl"], ["descricao", "Natus sunt debitis dolorem."], ["created_at", "2024-04-16 16:28:04.382285"], ["updated_at", "2024-04-16 16:28:04.382285"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Now Sleeps the Crimson Petal"], ["descricao", "Facilis qui quod ut."], ["created_at", "2024-04-16 16:28:04.391630"], ["updated_at", "2024-04-16 16:28:04.391630"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "I Will Fear No Evil"], ["descricao", "Sint autem aut a."], ["created_at", "2024-04-16 16:28:04.398390"], ["updated_at", "2024-04-16 16:28:04.398390"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Absalom, Absalom!"], ["descricao", "Numquam deleniti fuga laboriosam."], ["created_at", "2024-04-16 16:28:04.406807"], ["updated_at", "2024-04-16 16:28:04.406807"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.6ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "By Grand Central Station I Sat Down and Wept"], ["descricao", "Est sunt aut saepe."], ["created_at", "2024-04-16 16:28:04.413804"], ["updated_at", "2024-04-16 16:28:04.413804"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Now Sleeps the Crimson Petal"], ["descricao", "Quis placeat est cum."], ["created_at", "2024-04-16 16:28:04.422199"], ["updated_at", "2024-04-16 16:28:04.422199"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (4.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Behold the Man"], ["descricao", "Et eius omnis in."], ["created_at", "2024-04-16 16:28:04.428968"], ["updated_at", "2024-04-16 16:28:04.428968"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Precious Bane"], ["descricao", "Voluptatem minus officiis repellat."], ["created_at", "2024-04-16 16:28:04.439458"], ["updated_at", "2024-04-16 16:28:04.439458"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.8ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "An Evil Cradling"], ["descricao", "Aliquid in ipsa facere."], ["created_at", "2024-04-16 16:28:04.446398"], ["updated_at", "2024-04-16 16:28:04.446398"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Death Be Not Proud"], ["descricao", "Quia aut commodi repellat."], ["created_at", "2024-04-16 16:28:04.456018"], ["updated_at", "2024-04-16 16:28:04.456018"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Many Waters"], ["descricao", "Vel animi neque totam."], ["created_at", "2024-04-16 16:28:04.465247"], ["updated_at", "2024-04-16 16:28:04.465247"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Stranger in a Strange Land"], ["descricao", "Ipsum magnam qui est."], ["created_at", "2024-04-16 16:28:04.474902"], ["updated_at", "2024-04-16 16:28:04.474902"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Endless Night"], ["descricao", "Praesentium voluptas aut alias."], ["created_at", "2024-04-16 16:28:04.481491"], ["updated_at", "2024-04-16 16:28:04.481491"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "To Your Scattered Bodies Go"], ["descricao", "Minus qui numquam provident."], ["created_at", "2024-04-16 16:28:04.489326"], ["updated_at", "2024-04-16 16:28:04.489326"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.7ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Lathe of Heaven"], ["descricao", "Velit nobis facilis neque."], ["created_at", "2024-04-16 16:28:04.496775"], ["updated_at", "2024-04-16 16:28:04.496775"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.0ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Françoise Sagan"], ["descricao", "Ipsam odio placeat dolore."], ["created_at", "2024-04-16 16:28:04.506244"], ["updated_at", "2024-04-16 16:28:04.506244"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Parliament of Man"], ["descricao", "Commodi ex culpa et."], ["created_at", "2024-04-16 16:28:04.514699"], ["updated_at", "2024-04-16 16:28:04.514699"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "O Jerusalem!"], ["descricao", "Et hic et non."], ["created_at", "2024-04-16 16:28:04.523635"], ["updated_at", "2024-04-16 16:28:04.523635"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.3ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Vile Bodies"], ["descricao", "Ipsam odio labore sequi."], ["created_at", "2024-04-16 16:28:04.531570"], ["updated_at", "2024-04-16 16:28:04.531570"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Tirra Lirra by the River"], ["descricao", "Unde quia excepturi id."], ["created_at", "2024-04-16 16:28:04.539598"], ["updated_at", "2024-04-16 16:28:04.539598"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.3ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Eyeless in Gaza"], ["descricao", "Ratione accusantium blanditiis quibusdam."], ["created_at", "2024-04-16 16:28:04.545942"], ["updated_at", "2024-04-16 16:28:04.545942"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Gone with the Wind"], ["descricao", "Aperiam molestiae est vitae."], ["created_at", "2024-04-16 16:28:04.553932"], ["updated_at", "2024-04-16 16:28:04.553932"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.5ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Ego Dominus Tuus"], ["descricao", "Eos qui placeat dolorum."], ["created_at", "2024-04-16 16:28:04.560063"], ["updated_at", "2024-04-16 16:28:04.560063"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "A Time of Gifts"], ["descricao", "Doloribus quae qui ut."], ["created_at", "2024-04-16 16:28:04.566520"], ["updated_at", "2024-04-16 16:28:04.566520"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (1.9ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Daffodil Sky"], ["descricao", "Alias fugit cum numquam."], ["created_at", "2024-04-16 16:28:04.573055"], ["updated_at", "2024-04-16 16:28:04.573055"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Frequent Hearses"], ["descricao", "Sint deleniti laborum aspernatur."], ["created_at", "2024-04-16 16:28:04.578669"], ["updated_at", "2024-04-16 16:28:04.578669"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Look Homeward, Angel"], ["descricao", "Excepturi cumque sit ut."], ["created_at", "2024-04-16 16:28:04.584550"], ["updated_at", "2024-04-16 16:28:04.584550"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.0ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Dying of the Light"], ["descricao", "Vitae expedita et reprehenderit."], ["created_at", "2024-04-16 16:28:04.590780"], ["updated_at", "2024-04-16 16:28:04.590780"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Butter In a Lordly Dish"], ["descricao", "Sed sint quis sit."], ["created_at", "2024-04-16 16:28:04.596729"], ["updated_at", "2024-04-16 16:28:04.596729"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.0ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Moab Is My Washpot"], ["descricao", "Repellat accusamus itaque exercitationem."], ["created_at", "2024-04-16 16:28:04.603076"], ["updated_at", "2024-04-16 16:28:04.603076"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.4ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Surprised by Joy"], ["descricao", "Minima cum veniam consequatur."], ["created_at", "2024-04-16 16:28:04.609856"], ["updated_at", "2024-04-16 16:28:04.609856"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.3ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Nectar in a Sieve"], ["descricao", "Et inventore quas porro."], ["created_at", "2024-04-16 16:28:04.620752"], ["updated_at", "2024-04-16 16:28:04.620752"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Postern of Fate"], ["descricao", "Est quaerat pariatur architecto."], ["created_at", "2024-04-16 16:28:04.630969"], ["updated_at", "2024-04-16 16:28:04.630969"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.0ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Specimen Days"], ["descricao", "Ex doloribus occaecati necessitatibus."], ["created_at", "2024-04-16 16:28:04.640051"], ["updated_at", "2024-04-16 16:28:04.640051"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (1.9ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Shall not Perish"], ["descricao", "Asperiores voluptas ut illum."], ["created_at", "2024-04-16 16:28:04.646052"], ["updated_at", "2024-04-16 16:28:04.646052"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "The Parliament of Man"], ["descricao", "Asperiores inventore velit enim."], ["created_at", "2024-04-16 16:28:04.652936"], ["updated_at", "2024-04-16 16:28:04.652936"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "O Pioneers!"], ["descricao", "Quia rerum temporibus delectus."], ["created_at", "2024-04-16 16:28:04.659005"], ["updated_at", "2024-04-16 16:28:04.659005"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/organizacoes" for ::1 at 2024-04-16 13:33:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::OrganizacoesController):
+  
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:155:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/api/v1/organizacoes" for ::1 at 2024-04-16 13:33:29 -0300
+Processing by Api::V1::OrganizacoesController#index as */*
+  Parameters: {"query"=>"", "organizaco"=>{"query"=>""}}
+  [1m[36mOrganizacao Load (3.1ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 476ms (Views: 87.0ms | ActiveRecord: 46.0ms | Allocations: 28389)
+
+
