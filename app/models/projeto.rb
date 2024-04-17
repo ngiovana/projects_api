@@ -5,6 +5,7 @@ class Projeto < ApplicationRecord
     validates :status, presence: true
     validates :nivel, presence: true
 
-    has_one :organizacao
-    has_many :equipe
+    belongs_to :organizacao, foreign_key: 'id_org'
+    belongs_to :equipe, foreign_key: 'id_eq'
+    has_many :atividade, foreign_key: 'id_ativ'
 end

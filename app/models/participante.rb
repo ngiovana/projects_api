@@ -1,9 +1,9 @@
 class Participante < ApplicationRecord
-    validates :email, presence: true
+    validates :email, presence: true, uniqueness: true
     validates :cargo, presence: true
     validates :nome, presence: true
     validates :senha, presence: true
 
-    has_one :organizacao
-    has_many :equipe
+    belongs_to :organizacao, foreign_key: 'id_org'
+    belongs_to :equipe, foreign_key: 'id_eq'
 end
