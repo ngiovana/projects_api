@@ -11779,3 +11779,145 @@ Processing by Api::V1::ProjetosController#project_activities_ordered_by_priority
 Completed 200 OK in 44ms (Views: 15.8ms | ActiveRecord: 7.2ms | Allocations: 7669)
 
 
+  [1m[36mAtividade Load (4.3ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id_proj" = $1 ORDER BY "atividades"."prioridade" ASC[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:74:in `project_activities_ordered_by_priority'
+  [1m[36mAtividade Load (6.1ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", true]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:100:in `activities_with_true_status_by_organization_and_team'
+  [1m[36mAtividade Load (6.3ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", true]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:100:in `activities_with_true_status_by_organization_and_team'
+  [1m[36mAtividade Load (7.9ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:149:in `activities_with_false_status_by_organization_and_team'
+Started GET "/api/v1/rel_projects_by_team_and_organization" for ::1 at 2024-04-18 17:43:00 -0300
+Processing by Api::V1::OrganizacoesController#rel_projects_by_team_and_organization as */*
+  [1m[36mProjeto Load (4.1ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, organizacaos.nome AS nome_organizacao, projetos.* FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" INNER JOIN "organizacaos" ON "organizacaos"."id" = "projetos"."id_org"[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:235:in `rel_projects_by_team_and_organization'
+Completed 200 OK in 333ms (Views: 0.3ms | ActiveRecord: 41.9ms | Allocations: 14035)
+
+
+Started GET "/api/v1/projects_with_completion_percentage_by_organization/1" for ::1 at 2024-04-18 17:43:51 -0300
+Processing by Api::V1::OrganizacoesController#projects_with_completion_percentage_by_organization as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.9ms)[0m  [1m[34mSELECT projetos.id AS projeto_id, projetos.titulo AS projeto_titulo,
+													equipes.id AS equipe_id, equipes.nome AS equipe_nome FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" WHERE "projetos"."id_org" = $1[0m  [["id_org", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:193:in `group_by'
+  [1m[36mAtividade Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 1], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 3], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 3]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 2], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 2]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 10], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 10]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+Completed 200 OK in 161ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 9002)
+
+
+  [1m[36mProjeto Load (6.2ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, organizacaos.nome AS nome_organizacao, projetos.* FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" INNER JOIN "organizacaos" ON "organizacaos"."id" = "projetos"."id_org"[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:235:in `rel_projects_by_team_and_organization'
+  [1m[36mAtividade Load (2.1ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id_proj" = $1 ORDER BY "atividades"."prioridade" ASC[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:74:in `project_activities_ordered_by_priority'
+  [1m[36mProjeto Load (0.7ms)[0m  [1m[34mSELECT projetos.id AS projeto_id, projetos.titulo AS projeto_titulo,
+													equipes.id AS equipe_id, equipes.nome AS equipe_nome FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" WHERE "projetos"."id_org" = $1[0m  [["id_org", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:193:in `group_by'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 1], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 3], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 3]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 2], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 2]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 10], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 10]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+Started GET "/api/v1/activities_with_true_status_by_organization_and_team" for ::1 at 2024-04-18 17:49:33 -0300
+Processing by Api::V1::OrganizacoesController#activities_with_true_status_by_organization_and_team as */*
+  [1m[36mAtividade Load (7.0ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", true]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:100:in `activities_with_true_status_by_organization_and_team'
+Completed 200 OK in 246ms (Views: 0.3ms | ActiveRecord: 20.2ms | Allocations: 13781)
+
+
+Started GET "/api/v1/activities_with_false_status_by_organization_and_team" for ::1 at 2024-04-18 17:49:37 -0300
+Processing by Api::V1::OrganizacoesController#activities_with_false_status_by_organization_and_team as */*
+  [1m[36mAtividade Load (1.3ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:149:in `activities_with_false_status_by_organization_and_team'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 875)
+
+
+Started GET "/api/v1/rel_projects_by_team_and_organization" for ::1 at 2024-04-18 17:49:41 -0300
+Processing by Api::V1::OrganizacoesController#rel_projects_by_team_and_organization as */*
+  [1m[36mProjeto Load (3.6ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, organizacaos.nome AS nome_organizacao, projetos.* FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" INNER JOIN "organizacaos" ON "organizacaos"."id" = "projetos"."id_org"[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:235:in `rel_projects_by_team_and_organization'
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 6764)
+
+
+Started GET "/api/v1/projects_with_completion_percentage_by_organization/1" for ::1 at 2024-04-18 17:49:44 -0300
+Processing by Api::V1::OrganizacoesController#projects_with_completion_percentage_by_organization as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/api/v1/organizacoes_controller.rb:187:in `projects_with_completion_percentage_by_organization'
+Started GET "/api/v1/projects_with_completion_percentage_by_organization/1" for ::1 at 2024-04-18 17:49:59 -0300
+Processing by Api::V1::OrganizacoesController#projects_with_completion_percentage_by_organization as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.7ms)[0m  [1m[34mSELECT projetos.id AS projeto_id, projetos.titulo AS projeto_titulo,
+													equipes.id AS equipe_id, equipes.nome AS equipe_nome FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" WHERE "projetos"."id_org" = $1[0m  [["id_org", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:193:in `group_by'
+  [1m[36mAtividade Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 1], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 3], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 3]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 2], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 2]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 10], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 10]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+Completed 200 OK in 203ms (Views: 0.4ms | ActiveRecord: 34.8ms | Allocations: 15052)
+
+
+Started GET "/api/v1/project_activities_ordered_by_priority/1" for ::1 at 2024-04-18 17:50:04 -0300
+Processing by Api::V1::ProjetosController#project_activities_ordered_by_priority as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAtividade Load (0.4ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id_proj" = $1 ORDER BY "atividades"."prioridade" ASC[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:78:in `project_activities_ordered_by_priority'
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 3.1ms | Allocations: 5162)
+
+

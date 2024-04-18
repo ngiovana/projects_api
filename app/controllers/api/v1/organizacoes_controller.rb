@@ -86,7 +86,7 @@ module Api
 			end
 
 			# Todas as atividades em andamento agrupadas por organização e equipes
-			def activities_with_true_status_by_organization_and_team
+			def activities_with_true_status_by_organization_and_team(menu = '')
 				atividades_por_organizacao_equipe = Atividade.joins(:projeto, :equipe)
 															  .where(status: true)
 															  .group("atividades.id_org, atividades.id_eq")
@@ -112,11 +112,30 @@ module Api
 				  }
 				end
 			  
-				render json: { status: 'SUCCESS', message: 'Atividades em andamento por organização e equipe', data: result }
+				if menu.present? 
+					puts "Status: SUCCESS"
+					puts "Message: Atividades em andamento por organização e equipe"
+					puts "Data:"
+					
+					result.each do |organizacao_id, equipes|
+						puts "Organização ID: #{organizacao_id}"
+						equipes.each do |equipe_id, data|
+							puts "\tEquipe ID: #{equipe_id}"
+							puts "\tTotal de Atividades: #{data[:total_atividades]}"
+							puts "\tAtividades:"
+							data[:atividades].each do |atividade|
+								puts "\t\tTitulo: #{atividade[:titulo]}"
+								puts "\t\tNome da Equipe: #{atividade[:nome_equipe]}"
+							end
+						end
+					end
+				else
+					render json: { status: 'SUCCESS', message: 'Atividades em andamento por organização e equipe', data: result }
+				end
 			end
 
 			# Atividades finalizadas, agrupadas por organização e equipes
-			def activities_with_false_status_by_organization_and_team
+			def activities_with_false_status_by_organization_and_team(menu = '')
 				atividades_por_organizacao_equipe = Atividade.joins(:projeto, :equipe)
 															  .where(status: false)
 															  .group("atividades.id_org, atividades.id_eq")
@@ -142,12 +161,31 @@ module Api
 				  }
 				end
 			  
-				render json: { status: 'SUCCESS', message: 'Atividades concluídas por organização e equipe', data: result }
+				if menu.present? 
+					puts "Status: SUCCESS"
+					puts "Message: Atividades em andamento por organização e equipe"
+					puts "Data:"
+					
+					result.each do |organizacao_id, equipes|
+						puts "Organização ID: #{organizacao_id}"
+						equipes.each do |equipe_id, data|
+							puts "\tEquipe ID: #{equipe_id}"
+							puts "\tTotal de Atividades: #{data[:total_atividades]}"
+							puts "\tAtividades:"
+							data[:atividades].each do |atividade|
+								puts "\t\tTitulo: #{atividade[:titulo]}"
+								puts "\t\tNome da Equipe: #{atividade[:nome_equipe]}"
+							end
+						end
+					end
+				else
+					render json: { status: 'SUCCESS', message: 'Atividades concluídas por organização e equipe', data: result }
+				end
 			end
 
 			# Andamento dos projetos
-			def projects_with_completion_percentage_by_organization
-				org_id = params[:id]
+			def projects_with_completion_percentage_by_organization(menu_id = '', menu = '')
+				org_id = menu_id.present? ? menu_id : params[:id]
 				projects_by_team = Projeto.where(id_org: org_id)
 										   .joins(:equipe)
 										   .select("projetos.id AS projeto_id, projetos.titulo AS projeto_titulo,
@@ -168,13 +206,26 @@ module Api
 					result[equipe_id][:projetos] << { projeto_id: projeto.projeto_id, projeto_titulo: projeto.projeto_titulo, percentual_completo: percentual_completo }
 				  end
 				end
-			  
-				render json: { status: 'SUCCESS', message: 'Relatório de andamento dos projetos', data: result }
-			  end
+				
+				if menu.present? 
+					puts "Status: SUCCESS"
+					puts "Message: Relatório de andamento dos projetos"
+					puts "Data:"
+					
+					result.each do |equipe_id, data|
+						puts "Equipe ID: #{equipe_id}, Nome: #{data[:equipe_nome]}"
+						data[:projetos].each do |projeto|
+							puts "\tProjeto ID: #{projeto[:projeto_id]}, Título: #{projeto[:projeto_titulo]}, Percentual Completo: #{projeto[:percentual_completo]}%"
+						end
+					end
+				else 
+					render json: { status: 'SUCCESS', message: 'Relatório de andamento dos projetos', data: result }
+				end
+			end
 			  
 			  
 			# projetos por equipe
-			def rel_projects_by_team_and_organization
+			def rel_projects_by_team_and_organization(menu = '')
 				projetos_por_equipe_e_organizacao = Projeto.joins(:equipe, :organizacao)
 															.select("equipes.nome AS nome_equipe, organizacaos.nome AS nome_organizacao, projetos.*")
 			  
@@ -199,8 +250,23 @@ module Api
 				  }
 				end
 			  
-				render json: { status: 'SUCCESS', message: 'Projetos por equipe e organização', data: projetos_por_equipe_e_organizacao_hash }
-			  end
+				if menu.present? 
+					puts "Status: SUCCESS"
+					puts "Message: Projetos por equipe e organização"
+					puts "Data:"
+
+					projetos_por_equipe_e_organizacao_hash.each do |equipe_id, organizacoes|
+						organizacoes.each do |organizacao_id, data|
+							puts "Equipe: #{data[:equipe]}, Organização: #{data[:organizacao]}"
+							data[:projetos].each do |projeto|
+								puts "\tProjeto ID: #{projeto[:id]}, Título: #{projeto[:titulo]}, Descrição: #{projeto[:descricao]}"
+							end
+						end
+					end
+				else 
+					render json: { status: 'SUCCESS', message: 'Projetos por equipe e organização', data: projetos_por_equipe_e_organizacao_hash }
+			  	end
+			end
 			
 			private
 
