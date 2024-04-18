@@ -40,6 +40,65 @@ module Api
 					render json: {status: 'ERROR', message:'Projeto nao atualizado', data: projeto.erros}, status: :unprocessable_entity
 				end
 			end
+
+			# Concluir um projeto
+			def project_done
+				projeto = Projeto.find(params[:id])
+
+				atividades_do_projeto = Atividade.joins(:projeto).where(projetos: { id: projeto.id })
+
+				todas_as_atividades_concluidas = atividades_do_projeto.all? { |atividade| atividade.status == false }
+
+				# status true significa Em Andamento
+				# status false significa Concluido
+				if todas_as_atividades_concluidas && projeto.status == true
+					projeto.status = false
+
+					if projeto.update({status: projeto.status})
+						render json: {status: 'SUCCESS', message:'Projeto concluído', data: projeto}, status: :ok
+					end
+				elsif projeto.status == false
+					render json: {status: 'ERROR', message:'Projeto já concluído', data: projeto}
+				else 
+					render json: {status: 'ERROR', message:'Para concluir o projeto, todas as atividades do mesmo devem estar concluídas', data: projeto}
+				end
+			end
+			
+			# def rel_project_activities_by_team
+			# 	atividades_por_equipe = Atividade.joins(:projeto)
+            #                       .joins("INNER JOIN equipes ON projetos.id_eq = equipes.id")
+            #                       .select("equipes.nome AS nome_equipe, atividades.*")
+            #                       .group("equipes.id, atividades.id")
+
+			# 	atividades_por_equipe.each do |atividade|
+			# 		puts "Equipe: #{atividade.nome_equipe}"
+			# 		puts "  Título: #{atividade.titulo}, Descrição: #{atividade.descricao}"
+			# 	end
+
+			# 	render json: {status: 'ERROR', message:'Para concluir o projeto, todas as atividades do mesmo devem estar concluídas', data: projeto}
+			# end
+
+			def rel_project_activities_by_team
+				atividades_por_equipe = Atividade.joins(:projeto)
+												  .joins("INNER JOIN equipes ON projetos.id_eq = equipes.id")
+												  .select("equipes.nome AS nome_equipe, atividades.*")
+												  .group("equipes.id, atividades.id")
+			  
+				atividades_por_equipe_hash = {}
+			  
+				atividades_por_equipe.each do |atividade|
+				  equipe_id = atividade["id_eq"]
+
+				  atividades_por_equipe_hash[equipe_id] ||= { equipe: atividade["nome_equipe"], atividades: [] }
+				  atividades_por_equipe_hash[equipe_id][:atividades] << { 
+					id: atividade["id"], 
+					titulo: atividade["titulo"], 
+					descricao: atividade["descricao"] 
+				  }
+				end
+			  
+				render json: { status: 'SUCCESS', message: 'Atividades por equipe', data: atividades_por_equipe_hash.values }
+			  end
 			
 			private
 

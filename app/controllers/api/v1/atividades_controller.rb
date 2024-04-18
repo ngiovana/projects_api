@@ -40,6 +40,22 @@ module Api
 					render json: {status: 'ERROR', message:'Atividade nao atualizada', data: atividade.erros}, status: :unprocessable_entity
 				end
 			end
+
+			# Concluir uma atividade 
+			def activity_done
+				atividade = Atividade.find(params[:id])
+
+				# status true significa Em Andamento
+				# status false significa Concluida
+				if atividade.status == true
+					atividade.status = false
+					if atividade.update({status: atividade.status})
+						render json: {status: 'SUCCESS', message:'Atividade concluída', data: atividade}, status: :ok
+					end
+				else
+					render json: {status: 'ERROR', message:'Atividade já concluída', data: atividade}
+				end
+			end
 			
 			private
 

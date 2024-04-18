@@ -7934,3 +7934,1075 @@ FOREIGN KEY ("id_org")
   [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
   [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Mrs. Walter Waelchi"], ["descricao", "Aut qui molestiae natus."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-04-22"], ["prioridade", 4], ["status", true], ["id_proj", 9], ["id_org", 3], ["created_at", "2024-04-18 11:53:12.467411"], ["updated_at", "2024-04-18 11:53:12.467411"]]
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAtividade Load (3.2ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" /* loading for pp */ ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/ws" for ::1 at 2024-04-18 10:08:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2024-04-18 10:09:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2024-04-18 10:09:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2024-04-18 10:09:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/" for ::1 at 2024-04-18 10:09:26 -0300
+Started GET "/" for ::1 at 2024-04-18 10:09:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant OrganizacoesController):
+  
+  
+ActionController::RoutingError (uninitialized constant OrganizacoesController):
+  
+Started GET "/favicon.ico" for ::1 at 2024-04-18 10:09:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2024-04-18 10:10:33 -0300
+  
+ActionController::RoutingError (uninitialized constant OrganizacoesController):
+  
+Started GET "/" for ::1 at 2024-04-18 10:10:41 -0300
+  
+ActionController::RoutingError (uninitialized constant OrganizacoesController):
+  
+Started GET "/" for ::1 at 2024-04-18 10:11:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant OrganizacoesController):
+  
+Started GET "/" for ::1 at 2024-04-18 10:36:21 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+  [1m[36mOrganizacao Load (2.9ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 371ms (Views: 60.5ms | ActiveRecord: 43.7ms | Allocations: 20794)
+
+
+Started GET "/BmaAcesso/agenda/" for ::1 at 2024-04-18 10:36:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BmaAcesso/agenda"):
+  
+Started GET "/" for ::1 at 2024-04-18 10:36:59 -0300
+  
+ActionController::RoutingError (uninitialized constant OrganizacoesController):
+  
+Started GET "/BmaAcesso/agenda/" for ::1 at 2024-04-18 10:41:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BmaAcesso/agenda"):
+  
+Started GET "/BmaAcesso/agenda/" for ::1 at 2024-04-18 10:41:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BmaAcesso/agenda"):
+  
+Started GET "/" for ::1 at 2024-04-18 10:41:24 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:41:37 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 42)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:44:37 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/menu" for ::1 at 2024-04-18 10:44:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/menu"):
+  
+Started GET "/api/v1/menu" for ::1 at 2024-04-18 10:45:10 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 42)
+
+
+Started GET "/BmaAcesso/agenda/" for ::1 at 2024-04-18 10:46:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BmaAcesso/agenda"):
+  
+Started GET "/BmaAcesso/agenda/chrome.css.map" for ::1 at 2024-04-18 10:46:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BmaAcesso/agenda/chrome.css.map"):
+  
+Started GET "/" for ::1 at 2024-04-18 10:46:34 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/api/v1/menu" for ::1 at 2024-04-18 10:46:45 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 42)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:47:16 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 114)
+
+
+Started GET "/api/v1/menu" for ::1 at 2024-04-18 10:47:24 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 43)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:51:16 -0300
+Processing by Api::V1::MenuController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 114)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:51:25 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 274)
+Completed 200 OK in 115ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2859)
+
+
+Started GET "/BmaAcesso/agenda/" for ::1 at 2024-04-18 10:51:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/BmaAcesso/agenda"):
+  
+Started GET "/" for ::1 at 2024-04-18 10:51:49 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:52:28 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 1922)
+
+
+  
+NameError (undefined local variable or method `organizacoes' for #<Api::V1::OrganizacoesController:0x00000000048be8>):
+  
+app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2024-04-18 10:52:42 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+  [1m[36mOrganizacao Load (1.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 16.3ms | ActiveRecord: 6.2ms | Allocations: 5182)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:53:25 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+  [1m[36mOrganizacao Load (0.6ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 14.3ms | ActiveRecord: 7.2ms | Allocations: 5066)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:54:13 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 13ms (ActiveRecord: 0.0ms | Allocations: 1829)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:54:16 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 42)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:54:31 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 14ms (ActiveRecord: 0.0ms | Allocations: 1782)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:56:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 630ms (ActiveRecord: 13.3ms | Allocations: 13480)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:57:06 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 53)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:57:15 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 50)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:58:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 204 No Content in 237ms (ActiveRecord: 13.2ms | Allocations: 13479)
+
+
+Started GET "/" for ::1 at 2024-04-18 10:58:37 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1906)
+
+
+Started GET "/" for ::1 at 2024-04-18 11:02:04 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1847)
+
+
+Started GET "/" for ::1 at 2024-04-18 11:07:54 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+  [1m[36mOrganizacao Load (3.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 263ms (Views: 67.7ms | ActiveRecord: 41.3ms | Allocations: 14149)
+
+
+Started GET "/" for ::1 at 2024-04-18 11:15:00 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+  [1m[36mOrganizacao Load (152.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 174ms (Views: -5.6ms | ActiveRecord: 166.4ms | Allocations: 7708)
+
+
+Started GET "/api/v1/activity_done" for ::1 at 2024-04-18 11:15:11 -0300
+Processing by Api::V1::AtividadesController#activity_done as HTML
+Completed 404 Not Found in 102ms (ActiveRecord: 7.8ms | Allocations: 2004)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Atividade without an ID):
+  
+app/controllers/api/v1/atividades_controller.rb:46:in `activity_done'
+Started GET "/api/v1/activity_done/1" for ::1 at 2024-04-18 11:16:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/activity_done/1"):
+  
+Started GET "/api/v1/activity_done/1" for ::1 at 2024-04-18 11:16:29 -0300
+Processing by Api::V1::AtividadesController#activity_done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAtividade Load (1.7ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:46:in `activity_done'
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 19.0ms | Allocations: 13511)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, FalseClass passed.):
+  
+app/controllers/api/v1/atividades_controller.rb:50:in `activity_done'
+Started GET "/api/v1/activity_done/1" for ::1 at 2024-04-18 11:16:54 -0300
+Processing by Api::V1::AtividadesController#activity_done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAtividade Load (0.4ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:46:in `activity_done'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:50:in `activity_done'
+  [1m[36mAtividade Update (4.7ms)[0m  [1m[33mUPDATE "atividades" SET "status" = $1, "updated_at" = $2 WHERE "atividades"."id" = $3[0m  [["status", false], ["updated_at", "2024-04-18 14:16:55.038876"], ["id", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:50:in `activity_done'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:50:in `activity_done'
+Completed 200 OK in 47ms (Views: 0.7ms | ActiveRecord: 12.1ms | Allocations: 8831)
+
+
+Started GET "/api/v1/activity_done/1" for ::1 at 2024-04-18 11:17:04 -0300
+Processing by Api::V1::AtividadesController#activity_done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAtividade Load (0.5ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:46:in `activity_done'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 587)
+
+
+Started GET "/" for ::1 at 2024-04-18 11:26:47 -0300
+Processing by Api::V1::OrganizacoesController#index as HTML
+  [1m[36mOrganizacao Load (148.0ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:8:in `index'
+Completed 200 OK in 185ms (Views: -3.5ms | ActiveRecord: 176.3ms | Allocations: 8055)
+
+
+Started GET "/api;v1/project_done/1" for ::1 at 2024-04-18 11:27:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api;v1/project_done/1"):
+  
+Started GET "/api/v1/project_done/1" for ::1 at 2024-04-18 11:27:44 -0300
+  
+SyntaxError (C:/Users/BMA Sistemas/Documents/dev/projects/udesc/gerenciador_projetos/app/controllers/api/v1/projetos_controller.rb:50: syntax error, unexpected '='
+...das_as_atividades_concluidas? = atividades_do_projeto.all? {...
+...                              ^
+):
+  
+app/controllers/api/v1/projetos_controller.rb:50: syntax error, unexpected '='
+Started GET "/api/v1/project_done/1" for ::1 at 2024-04-18 11:28:06 -0300
+Processing by Api::V1::ProjetosController#project_done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (1.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:46:in `project_done'
+  [1m[36mAtividade Load (2.8ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" WHERE "projetos"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:50:in `all?'
+Completed 200 OK in 204ms (Views: 1.0ms | ActiveRecord: 20.3ms | Allocations: 19899)
+
+
+Started GET "/api/v1/project_done/1" for ::1 at 2024-04-18 11:37:56 -0300
+  
+SyntaxError (C:/Users/BMA Sistemas/Documents/dev/projects/udesc/gerenciador_projetos/app/controllers/api/v1/projetos_controller.rb:90: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/api/v1/projetos_controller.rb:90: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:38:21 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (2.1ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (5.3ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY "equipes"."id"[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:75:in `rel_project_activities_by_team'
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 21.6ms | Allocations: 11888)
+
+
+  
+ActiveRecord::StatementInvalid (PG::GroupingError: ERRO:  coluna "atividades.id" deve aparecer na cláusula GROUP BY ou ser usada em uma função de agregação
+LINE 1: SELECT "atividades".* FROM "atividades" INNER JOIN "projetos...
+               ^
+):
+  
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:39:08 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (4.5ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:75:in `rel_project_activities_by_team'
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 28.3ms | Allocations: 13451)
+
+
+  
+NoMethodError (undefined method `nome' for #<Atividade id: 6, titulo: "Eneida McClure MD", descricao: "Quia officia repellat laudantium.", dt_inicial: "2024-04-18", dt_final: "2024-05-09", prioridade: 1, status: true, id_proj: 1, id_org: 1, created_at: "2024-04-18 11:53:12.165505000 +0000", updated_at: "2024-04-18 11:53:12.165505000 +0000">):
+  
+app/controllers/api/v1/projetos_controller.rb:76:in `block in rel_project_activities_by_team'
+app/controllers/api/v1/projetos_controller.rb:75:in `rel_project_activities_by_team'
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:42:17 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (0.9ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:82:in `puts'
+Completed 204 No Content in 67ms (ActiveRecord: 13.1ms | Allocations: 13274)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:42:20 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (0.8ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:82:in `puts'
+Completed 204 No Content in 10ms (ActiveRecord: 1.2ms | Allocations: 1169)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:42:28 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.6ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (0.8ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:82:in `puts'
+Completed 204 No Content in 61ms (ActiveRecord: 10.6ms | Allocations: 13175)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:42:30 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (1.3ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:82:in `puts'
+Completed 204 No Content in 11ms (ActiveRecord: 1.7ms | Allocations: 1169)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:42:53 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (1.0ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id /* loading for inspect */ LIMIT $2[0m  [["id", 1], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 8.0ms | Allocations: 13911)
+
+
+  [1m[36mCACHE Atividade Load (0.0ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id /* loading for inspect */ LIMIT $2[0m  [["id", 1], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `titulo' for #<ActiveRecord::Relation [#<Atividade id: 6, titulo: "Eneida McClure MD", descricao: "Quia officia repellat laudantium.", dt_inicial: "2024-04-18", dt_final: "2024-05-09", prioridade: 1, status: true, id_proj: 1, id_org: 1, created_at: "2024-04-18 11:53:12.165505000 +0000", updated_at: "2024-04-18 11:53:12.165505000 +0000">, #<Atividade id: 10, titulo: "Jacob Robel IV", descricao: "Optio amet eum ipsam.", dt_inicial: "2024-04-16", dt_final: "2024-05-11", prioridade: 1, status: true, id_proj: 1, id_org: 1, created_at: "2024-04-18 11:53:12.214154000 +0000", updated_at: "2024-04-18 11:53:12.214154000 +0000">]>):
+  
+app/controllers/api/v1/projetos_controller.rb:82:in `rel_project_activities_by_team'
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:43:33 -0300
+  
+SyntaxError (C:/Users/BMA Sistemas/Documents/dev/projects/udesc/gerenciador_projetos/app/controllers/api/v1/projetos_controller.rb:94: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/api/v1/projetos_controller.rb:94: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:43:39 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (1.2ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:82:in `rel_project_activities_by_team'
+Completed 204 No Content in 83ms (ActiveRecord: 16.2ms | Allocations: 13244)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:45:10 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 12.0ms | Allocations: 8958)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Atividade' to association named 'equipe'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/projetos_controller.rb:75:in `rel_project_activities_by_team'
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:46:03 -0300
+  
+SyntaxError (C:/Users/BMA Sistemas/Documents/dev/projects/udesc/gerenciador_projetos/app/controllers/api/v1/projetos_controller.rb:70: syntax error, unexpected ':', expecting ')'
+...pe = Atividade.joins(:projeto :equipe)
+...                              ^
+):
+  
+app/controllers/api/v1/projetos_controller.rb:70: syntax error, unexpected ':', expecting ')'
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:46:29 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 13.3ms | Allocations: 9026)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Atividade' to association named 'equipe'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/projetos_controller.rb:75:in `rel_project_activities_by_team'
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:48:37 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 7.2ms | Allocations: 8991)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Atividade' to association named 'projetos'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/projetos_controller.rb:75:in `rel_project_activities_by_team'
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:49:25 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:68:in `rel_project_activities_by_team'
+  [1m[36mAtividade Load (1.4ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, atividades.* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id WHERE "projetos"."id" = $1 GROUP BY equipes.id, atividades.id[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:76:in `rel_project_activities_by_team'
+Completed 204 No Content in 78ms (ActiveRecord: 16.3ms | Allocations: 13331)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:50:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/rel_project_activities_by_team/1"):
+  
+Started GET "/api/v1/rel_project_activities_by_team" for ::1 at 2024-04-18 11:50:51 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  [1m[36mAtividade Load (1.2ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, atividades.* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id GROUP BY equipes.id, atividades.id[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:73:in `rel_project_activities_by_team'
+Completed 204 No Content in 108ms (ActiveRecord: 11.9ms | Allocations: 9690)
+
+
+Started GET "/api/v1/rel_project_activities_by_team/1" for ::1 at 2024-04-18 11:52:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/rel_project_activities_by_team/1"):
+  
+Started GET "/api/v1/rel_project_activities_by_team" for ::1 at 2024-04-18 11:52:20 -0300
+Processing by Api::V1::ProjetosController#rel_project_activities_by_team as HTML
+  [1m[36mAtividade Load (1.0ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, atividades.* FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN equipes ON projetos.id_eq = equipes.id GROUP BY equipes.id, atividades.id[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:90:in `rel_project_activities_by_team'
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 10.1ms | Allocations: 9706)
+
+
+Started GET "/api/v1/rel_projects_by_team_and_organization" for ::1 at 2024-04-18 11:56:23 -0300
+  
+AbstractController::ActionNotFound (The action 'rel_projects_by_team_and_organization' could not be found for Api::V1::ProjetosController):
+  
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:155:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.10) lib/rack/etag.rb:29:in `call'
+rack (3.0.10) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.10) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/api/v1/rel_projects_by_team_and_organization" for ::1 at 2024-04-18 11:56:38 -0300
+Processing by Api::V1::OrganizacoesController#rel_projects_by_team_and_organization as HTML
+  [1m[36mProjeto Load (1.9ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, organizacaos.nome AS nome_organizacao, projetos.* FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" INNER JOIN "organizacaos" ON "organizacaos"."id" = "projetos"."id_org"[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:51:in `rel_projects_by_team_and_organization'
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 10.9ms | Allocations: 10670)
+
+
+Started GET "/api/v1/rel_activities_until_date_by_project_team_organization/01-05-2024" for ::1 at 2024-04-18 12:00:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/rel_activities_until_date_by_project_team_organization/01-05-2024"):
+  
+Started GET "/api/v1/rel_activities_until_date_by_project_team_organization/01-05-2024" for ::1 at 2024-04-18 12:00:42 -0300
+Processing by Api::V1::OrganizacoesController#rel_activities_until_date_by_project_team_organization as HTML
+  Parameters: {"end_date"=>"01-05-2024"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 131)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/v1/organizacoes_controller.rb:72:in `rel_activities_until_date_by_project_team_organization'
+Started GET "/api/v1/rel_activities_until_date_by_project_team_organization/01-05-2024" for ::1 at 2024-04-18 12:02:05 -0300
+Processing by Api::V1::OrganizacoesController#rel_activities_until_date_by_project_team_organization as HTML
+  Parameters: {"end_date"=>"01-05-2024"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.8ms | Allocations: 3371)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Atividade' to association named 'equipe'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/organizacoes_controller.rb:84:in `rel_activities_until_date_by_project_team_organization'
+  [1m[36mOrganizacao Load (2.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos"[0m
+  ↳ lib/tasks/custom_console.rake:18:in `block (3 levels) in <main>'
+  [1m[36mOrganizacao Load (1.6ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (2.0ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (2.0ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (2.1ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (0.6ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (1.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (1.8ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (2.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 ORDER BY "organizacaos"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (1.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 ORDER BY "organizacaos"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:14:in `show'
+  [1m[36mOrganizacao Load (1.9ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 ORDER BY "organizacaos"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:23:in `show'
+  [1m[36mOrganizacao Load (0.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 ORDER BY "organizacaos"."id" ASC LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:23:in `show'
+  [1m[36mOrganizacao Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "organizacaos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:9:in `index'
+  [1m[36mOrganizacao Load (1.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:11:in `index'
+  [1m[36mOrganizacao Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "organizacaos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:9:in `index'
+  [1m[36mOrganizacao Load (1.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:11:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:42:in `create'
+  [1m[36mOrganizacao Create (5.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Org console"], ["descricao", "teste"], ["created_at", "2024-04-18 16:19:19.329829"], ["updated_at", "2024-04-18 16:19:19.329829"]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:42:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:42:in `create'
+  [1m[36mOrganizacao Load (1.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mOrganizacao Destroy (11.0ms)[0m  [1m[31mDELETE FROM "organizacaos" WHERE "organizacaos"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mOrganizacao Load (1.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mOrganizacao Destroy (8.1ms)[0m  [1m[31mDELETE FROM "organizacaos" WHERE "organizacaos"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mOrganizacao Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "organizacaos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:9:in `index'
+  [1m[36mOrganizacao Load (1.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:11:in `index'
+  [1m[36mOrganizacao Load (2.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" IS NULL ORDER BY "organizacaos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:73:in `update'
+  [1m[36mOrganizacao Load (1.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" IS NULL ORDER BY "organizacaos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:73:in `update'
+  [1m[36mOrganizacao Load (1.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:73:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:75:in `update'
+  [1m[36mOrganizacao Update (2.4ms)[0m  [1m[33mUPDATE "organizacaos" SET "nome" = $1, "descricao" = $2, "updated_at" = $3 WHERE "organizacaos"."id" = $4[0m  [["nome", "fdsgf"], ["descricao", "fgds"], ["updated_at", "2024-04-18 16:58:07.147628"], ["id", 2]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:75:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:75:in `update'
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (125.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gerenciador_projetos_db"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gerenciador_projetos_db"[0m
+  [1m[35m (709.5ms)[0m  [1m[35mCREATE DATABASE "gerenciador_projetos_db" ENCODING = 'unicode'[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE DATABASE "gerenciador_projetos_db" ENCODING = 'unicode'[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(657270541364502345)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-04-18 16:58:44.185340', '2024-04-18 16:58:44.185346') RETURNING "key"[0m
+Migrating to CreateOrganizacaos (20240416162312)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE TABLE "organizacaos" ("id" bigserial primary key, "nome" character varying, "descricao" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240416162312') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParticipantes (20240416220743)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "participantes" ("id" bigserial primary key, "email" character varying, "cargo" integer, "nome" character varying, "senha" character varying, "id_eq" integer, "id_org" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240416220743') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEquipes (20240416223254)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "equipes" ("id" bigserial primary key, "nome" character varying, "nivel" integer, "id_org" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240416223254') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjetos (20240416225202)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE TABLE "projetos" ("id" bigserial primary key, "titulo" character varying, "descricao" text, "prazo_inicial" date, "prazo_final" date, "status" boolean, "nivel" integer, "id_org" integer, "id_eq" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240416225202') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAtividades (20240416232043)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "atividades" ("id" bigserial primary key, "titulo" character varying, "descricao" text, "dt_inicial" date, "dt_final" date, "prioridade" integer, "status" boolean, "id_proj" integer, "id_org" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240416232043') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEquipeIdAndOrgIdToParticipantes (20240418021936)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.7ms)[0m  [1m[35mALTER TABLE "participantes" ADD CONSTRAINT "fk_rails_d4b51f5e88"
+FOREIGN KEY ("id_eq")
+  REFERENCES "equipes" ("id")
+[0m
+  [1m[35m (6.4ms)[0m  [1m[35mALTER TABLE "participantes" ADD CONSTRAINT "fk_rails_c43a77985f"
+FOREIGN KEY ("id_org")
+  REFERENCES "organizacaos" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240418021936') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddOrgIdAndParIdAndProjIdToEquipes (20240418022420)
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "equipes" ADD CONSTRAINT "fk_rails_1af887bea3"
+FOREIGN KEY ("id_org")
+  REFERENCES "organizacaos" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240418022420') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddOrgIdAndEqIdToProjetos (20240418023202)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "projetos" ADD CONSTRAINT "fk_rails_091c881817"
+FOREIGN KEY ("id_org")
+  REFERENCES "organizacaos" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "projetos" ADD CONSTRAINT "fk_rails_2074155a21"
+FOREIGN KEY ("id_eq")
+  REFERENCES "equipes" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240418023202') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddProjIdToAtividades (20240418023351)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.8ms)[0m  [1m[35mALTER TABLE "atividades" ADD CONSTRAINT "fk_rails_52dc8cc76f"
+FOREIGN KEY ("id_proj")
+  REFERENCES "projetos" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "atividades" ADD CONSTRAINT "fk_rails_04664c0d15"
+FOREIGN KEY ("id_org")
+  REFERENCES "organizacaos" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240418023351') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(657270541364502345)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Time To Murder And Create"], ["descricao", "Inventore voluptas quas sed."], ["created_at", "2024-04-18 16:58:46.091892"], ["updated_at", "2024-04-18 16:58:46.091892"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (2.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Postern of Fate"], ["descricao", "Ab sint recusandae aliquam."], ["created_at", "2024-04-18 16:58:46.100181"], ["updated_at", "2024-04-18 16:58:46.100181"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Create (3.2ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "A Time of Gifts"], ["descricao", "Maxime vel quod similique."], ["created_at", "2024-04-18 16:58:46.107709"], ["updated_at", "2024-04-18 16:58:46.107709"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.6ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.5ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.6ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.6ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Create (1.5ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Jeana Ward"], ["nivel", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:46.701912"], ["updated_at", "2024-04-18 16:58:46.701912"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Create (0.9ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Adrian Homenick"], ["nivel", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:46.714821"], ["updated_at", "2024-04-18 16:58:46.714821"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Create (0.8ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Britt Baumbach Esq."], ["nivel", 2], ["id_org", 2], ["created_at", "2024-04-18 16:58:46.732286"], ["updated_at", "2024-04-18 16:58:46.732286"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Create (0.8ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Gov. Carry Reynolds"], ["nivel", 1], ["id_org", 2], ["created_at", "2024-04-18 16:58:46.749975"], ["updated_at", "2024-04-18 16:58:46.749975"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Create (0.6ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Noella Miller"], ["nivel", 2], ["id_org", 3], ["created_at", "2024-04-18 16:58:46.765452"], ["updated_at", "2024-04-18 16:58:46.765452"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Create (0.8ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Felix McDermott"], ["nivel", 3], ["id_org", 3], ["created_at", "2024-04-18 16:58:46.781230"], ["updated_at", "2024-04-18 16:58:46.781230"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProjeto Create (1.5ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Lavonna Wilkinson"], ["descricao", nil], ["prazo_inicial", "2024-04-16"], ["prazo_final", "2024-04-27"], ["status", true], ["nivel", 1], ["id_org", 1], ["id_eq", 1], ["created_at", "2024-04-18 16:58:46.853951"], ["updated_at", "2024-04-18 16:58:46.853951"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.8ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Britt Kassulke II"], ["descricao", nil], ["prazo_inicial", "2024-04-18"], ["prazo_final", "2024-05-12"], ["status", true], ["nivel", 3], ["id_org", 1], ["id_eq", 2], ["created_at", "2024-04-18 16:58:46.872879"], ["updated_at", "2024-04-18 16:58:46.872879"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.6ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Yaeko Morissette"], ["descricao", nil], ["prazo_inicial", "2024-04-16"], ["prazo_final", "2024-05-01"], ["status", true], ["nivel", 1], ["id_org", 1], ["id_eq", 2], ["created_at", "2024-04-18 16:58:46.886797"], ["updated_at", "2024-04-18 16:58:46.886797"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.2ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.6ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Irvin Greenfelder"], ["descricao", nil], ["prazo_inicial", "2024-04-16"], ["prazo_final", "2024-05-17"], ["status", true], ["nivel", 3], ["id_org", 2], ["id_eq", 3], ["created_at", "2024-04-18 16:58:46.901647"], ["updated_at", "2024-04-18 16:58:46.901647"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.6ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Patrice Langosh"], ["descricao", nil], ["prazo_inicial", "2024-04-18"], ["prazo_final", "2024-05-12"], ["status", true], ["nivel", 3], ["id_org", 2], ["id_eq", 3], ["created_at", "2024-04-18 16:58:46.917763"], ["updated_at", "2024-04-18 16:58:46.917763"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.9ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Terese Douglas"], ["descricao", nil], ["prazo_inicial", "2024-04-18"], ["prazo_final", "2024-04-28"], ["status", true], ["nivel", 3], ["id_org", 2], ["id_eq", 3], ["created_at", "2024-04-18 16:58:46.935332"], ["updated_at", "2024-04-18 16:58:46.935332"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.9ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.5ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Isabelle Schuppe"], ["descricao", nil], ["prazo_inicial", "2024-04-17"], ["prazo_final", "2024-05-14"], ["status", true], ["nivel", 2], ["id_org", 3], ["id_eq", 5], ["created_at", "2024-04-18 16:58:46.951997"], ["updated_at", "2024-04-18 16:58:46.951997"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.6ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Emerson Rempel"], ["descricao", nil], ["prazo_inicial", "2024-04-18"], ["prazo_final", "2024-05-12"], ["status", true], ["nivel", 1], ["id_org", 3], ["id_eq", 6], ["created_at", "2024-04-18 16:58:46.967187"], ["updated_at", "2024-04-18 16:58:46.967187"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mProjeto Create (0.6ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Gwyn Hermiston"], ["descricao", nil], ["prazo_inicial", "2024-04-17"], ["prazo_final", "2024-05-18"], ["status", true], ["nivel", 2], ["id_org", 3], ["id_eq", 5], ["created_at", "2024-04-18 16:58:46.983671"], ["updated_at", "2024-04-18 16:58:46.983671"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (1.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Mohamed Schaden"], ["descricao", "Dolor tenetur qui consequatur."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-05-07"], ["prioridade", 1], ["status", true], ["id_proj", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.048472"], ["updated_at", "2024-04-18 16:58:47.048472"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Msgr. Han Murphy"], ["descricao", "Amet occaecati voluptatum id."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-18"], ["prioridade", 4], ["status", true], ["id_proj", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.068909"], ["updated_at", "2024-04-18 16:58:47.068909"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.8ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Devon Vandervort"], ["descricao", "Sit tempora fugit praesentium."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-29"], ["prioridade", 4], ["status", true], ["id_proj", 3], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.085801"], ["updated_at", "2024-04-18 16:58:47.085801"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.6ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.9ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Brooke Hickle"], ["descricao", "Suscipit nesciunt officia est."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-05-10"], ["prioridade", 2], ["status", true], ["id_proj", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.106709"], ["updated_at", "2024-04-18 16:58:47.106709"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.9ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Chauncey Hegmann"], ["descricao", "Quasi quia iusto omnis."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-05-12"], ["prioridade", 2], ["status", true], ["id_proj", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.131306"], ["updated_at", "2024-04-18 16:58:47.131306"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (1.1ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Elisabeth Christiansen"], ["descricao", "Eum expedita qui optio."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-05-15"], ["prioridade", 3], ["status", true], ["id_proj", 1], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.159334"], ["updated_at", "2024-04-18 16:58:47.159334"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (1.9ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Ms. Clyde Ward"], ["descricao", "Ut voluptas eos nostrum."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-04-27"], ["prioridade", 4], ["status", true], ["id_proj", 3], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.188571"], ["updated_at", "2024-04-18 16:58:47.188571"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.8ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Gov. Barney Bernier"], ["descricao", "In aut ut perspiciatis."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-27"], ["prioridade", 1], ["status", true], ["id_proj", 2], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.209153"], ["updated_at", "2024-04-18 16:58:47.209153"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Shanon Ryan"], ["descricao", "Sunt corporis fugit consequatur."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-05-01"], ["prioridade", 3], ["status", true], ["id_proj", 3], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.232701"], ["updated_at", "2024-04-18 16:58:47.232701"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (1.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Ethelene Boehm"], ["descricao", "In quas quae neque."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-04-25"], ["prioridade", 3], ["status", true], ["id_proj", 3], ["id_org", 1], ["created_at", "2024-04-18 16:58:47.252537"], ["updated_at", "2024-04-18 16:58:47.252537"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Terry Von"], ["descricao", "Vel nihil quidem voluptatem."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-04-26"], ["prioridade", 2], ["status", true], ["id_proj", 6], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.271532"], ["updated_at", "2024-04-18 16:58:47.271532"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Isaac Schultz Esq."], ["descricao", "Officia aperiam cumque aliquid."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-05-11"], ["prioridade", 1], ["status", true], ["id_proj", 6], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.289418"], ["updated_at", "2024-04-18 16:58:47.289418"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (2.0ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Krysten Weissnat"], ["descricao", "Sunt illum veniam quis."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-05-15"], ["prioridade", 4], ["status", true], ["id_proj", 5], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.316397"], ["updated_at", "2024-04-18 16:58:47.316397"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Alfonso Maggio"], ["descricao", "Ea voluptatem minus id."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-18"], ["prioridade", 3], ["status", true], ["id_proj", 4], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.340508"], ["updated_at", "2024-04-18 16:58:47.340508"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (1.4ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Virgilio Will"], ["descricao", "Saepe repudiandae earum quo."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-04-24"], ["prioridade", 1], ["status", true], ["id_proj", 6], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.359131"], ["updated_at", "2024-04-18 16:58:47.359131"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Bennett Lockman"], ["descricao", "Aspernatur voluptates modi eaque."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-04-29"], ["prioridade", 3], ["status", true], ["id_proj", 5], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.376018"], ["updated_at", "2024-04-18 16:58:47.376018"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Mervin VonRueden I"], ["descricao", "Architecto porro maxime nobis."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-05-13"], ["prioridade", 3], ["status", true], ["id_proj", 4], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.394555"], ["updated_at", "2024-04-18 16:58:47.394555"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Juliet Rice"], ["descricao", "Sit totam aliquid id."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-18"], ["prioridade", 3], ["status", true], ["id_proj", 6], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.410797"], ["updated_at", "2024-04-18 16:58:47.410797"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.7ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Dr. Garret Hayes"], ["descricao", "Et non labore dolorem."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-05-13"], ["prioridade", 4], ["status", true], ["id_proj", 4], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.430242"], ["updated_at", "2024-04-18 16:58:47.430242"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.9ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Amb. Jeffry Gutmann"], ["descricao", "Quam excepturi et quae."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-05-10"], ["prioridade", 2], ["status", true], ["id_proj", 6], ["id_org", 2], ["created_at", "2024-04-18 16:58:47.449864"], ["updated_at", "2024-04-18 16:58:47.449864"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Adalberto Goyette"], ["descricao", "Et aliquid in occaecati."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-04-18"], ["prioridade", 2], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.467320"], ["updated_at", "2024-04-18 16:58:47.467320"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Barton Funk"], ["descricao", "Recusandae ab minima animi."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-05-18"], ["prioridade", 2], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.484535"], ["updated_at", "2024-04-18 16:58:47.484535"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Sen. Lyla Bergstrom"], ["descricao", "At praesentium aut et."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-04-29"], ["prioridade", 1], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.503374"], ["updated_at", "2024-04-18 16:58:47.503374"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Antonina Hahn"], ["descricao", "Officiis rerum saepe neque."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-30"], ["prioridade", 1], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.521943"], ["updated_at", "2024-04-18 16:58:47.521943"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.5ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Michael Haag"], ["descricao", "Velit et voluptas ea."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-04-27"], ["prioridade", 1], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.539278"], ["updated_at", "2024-04-18 16:58:47.539278"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.2ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.7ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Florance Hills"], ["descricao", "Sed quo fugit quia."], ["dt_inicial", "2024-04-18"], ["dt_final", "2024-05-17"], ["prioridade", 2], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.554411"], ["updated_at", "2024-04-18 16:58:47.554411"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.8ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.8ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Temple Watsica"], ["descricao", "Velit minima nisi et."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-05-01"], ["prioridade", 2], ["status", true], ["id_proj", 8], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.581635"], ["updated_at", "2024-04-18 16:58:47.581635"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Marvis Mitchell"], ["descricao", "Placeat et dolores in."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-04-22"], ["prioridade", 4], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.598441"], ["updated_at", "2024-04-18 16:58:47.598441"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.8ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Gov. Reinaldo Rodriguez"], ["descricao", "Cupiditate quas molestias id."], ["dt_inicial", "2024-04-16"], ["dt_final", "2024-05-18"], ["prioridade", 1], ["status", true], ["id_proj", 9], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.615738"], ["updated_at", "2024-04-18 16:58:47.615738"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProjeto Load (0.2ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAtividade Create (0.6ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Sylvester Bashirian"], ["descricao", "Iusto illum velit hic."], ["dt_inicial", "2024-04-17"], ["dt_final", "2024-05-18"], ["prioridade", 1], ["status", true], ["id_proj", 7], ["id_org", 3], ["created_at", "2024-04-18 16:58:47.631657"], ["updated_at", "2024-04-18 16:58:47.631657"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
