@@ -7,9 +7,9 @@ class CreateProjetos < ActiveRecord::Migration[7.1]
       t.date :prazo_final
       t.boolean :status
       t.integer :nivel
-      t.integer :id_org
-      t.integer :id_eq
-      t.integer :id_ativ
+      # t.integer :id_org
+      # t.integer :id_eq
+      # t.integer :id_ativ
 
       t.timestamps
     end

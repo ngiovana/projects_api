@@ -7,5 +7,5 @@ class Projeto < ApplicationRecord
 
     belongs_to :organizacao, foreign_key: 'id_org'
     belongs_to :equipe, foreign_key: 'id_eq'
-    has_many :atividade, foreign_key: 'id_ativ'
+    has_many :atividade
 end

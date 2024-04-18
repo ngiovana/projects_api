@@ -5,8 +5,8 @@ class CreateParticipantes < ActiveRecord::Migration[7.1]
       t.integer :cargo
       t.string :nome
       t.string :senha
-      t.integer :id_ed
-      t.integer :id_org
+      # t.integer :id_eq
+      # t.integer :id_org
 
       t.timestamps
     end
