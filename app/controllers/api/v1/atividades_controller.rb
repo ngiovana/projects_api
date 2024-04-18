@@ -20,7 +20,7 @@ module Api
 				if atividade.save
 					render json: {status: 'SUCCESS', message: 'Atividade salva', data: atividade}, status: :ok
 				else
-					render json: {status: 'ERROR', message: 'Atividade nao salva', data: atividade.erros}, status: :unprocessable_entity
+					render json: {status: 'ERROR', message: 'Atividade nao salva', data: atividade}, status: :unprocessable_entity
 				end
 			end
 
@@ -37,7 +37,7 @@ module Api
 				if atividade.update(atividade_params)
 					render json: {status: 'SUCCESS', message:'Atividade atualizada', data: atividade}, status: :ok
 				else
-					render json: {status: 'ERROR', message:'Atividade nao atualizada', data: atividade.erros}, status: :unprocessable_entity
+					render json: {status: 'ERROR', message:'Atividade nao atualizada', data: atividade}, status: :unprocessable_entity
 				end
 			end
 
@@ -61,7 +61,7 @@ module Api
 
 			# Parametros aceitos
 			def atividade_params
-				params.permit(:titulo, :descricao, :status, :prioridade, :dt_inicial, :dt_final, :id_org, :id_proj)
+				params.permit(:titulo, :descricao, :status, :prioridade, :dt_inicial, :dt_final, :id_org, :id_proj, :id_eq)
 			end
 		end
 	end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_18_023351) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_18_182611) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_18_023351) do
     t.boolean "status"
     t.integer "id_proj"
     t.integer "id_org"
+    t.integer "id_eq"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -66,6 +67,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_18_023351) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "atividades", "equipes", column: "id_eq"
   add_foreign_key "atividades", "organizacaos", column: "id_org"
   add_foreign_key "atividades", "projetos", column: "id_proj"
   add_foreign_key "equipes", "organizacaos", column: "id_org"

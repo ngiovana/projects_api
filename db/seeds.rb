@@ -15,42 +15,9 @@
 	})
 end
 
-10.times do 
-	Participante.create({
-		nome: Faker::Name.unique.name,
-		email: Faker::Internet.email,
-		senha: Faker::Internet.password,
-		cargo: Faker::Number.between(from: 1, to: 3),
-		id_eq: Faker::Number.between(from: 1, to: 2),
-		id_org: 1
-	})
-end
-
-10.times do 
-	Participante.create({
-		nome: Faker::Name.unique.name,
-		email: Faker::Internet.email,
-		senha: Faker::Internet.password,
-		cargo: Faker::Number.between(from: 1, to: 3),
-		id_eq: Faker::Number.between(from: 3, to: 4),
-		id_org: 2
-	})
-end
-
-10.times do 
-	Participante.create({
-		nome: Faker::Name.unique.name,
-		email: Faker::Internet.email,
-		senha: Faker::Internet.password,
-		cargo: Faker::Number.between(from: 1, to: 3),
-		id_eq: Faker::Number.between(from: 5, to: 6),
-		id_org: 3
-	})
-end
-
 2.times do 
 	Equipe.create({
-		nome: Faker::Name.unique.name,
+		nome: Faker::Name.name,
 		nivel: Faker::Number.between(from: 1, to: 3),
 		id_org: 1,
 	})
@@ -69,6 +36,39 @@ end
 		nome: Faker::Name.unique.name,
 		nivel: Faker::Number.between(from: 1, to: 3),
 		id_org: 3,
+	})
+end
+
+10.times do 
+	Participante.create({
+		nome: Faker::Name.unique.name,
+		email: Faker::Internet.email,
+		senha: Faker::Internet.password,
+		cargo: Faker::Number.between(from: 1, to: 3),
+		id_eq: Faker::Number.between(from: 1, to: 2),
+		id_org: 1
+	})
+end
+
+10.times do 
+	Participante.create({
+		nome: Faker::Name.name,
+		email: Faker::Internet.email,
+		senha: Faker::Internet.password,
+		cargo: Faker::Number.between(from: 1, to: 3),
+		id_eq: Faker::Number.between(from: 3, to: 4),
+		id_org: 2
+	})
+end
+
+10.times do 
+	Participante.create({
+		nome: Faker::Name.name,
+		email: Faker::Internet.email,
+		senha: Faker::Internet.password,
+		cargo: Faker::Number.between(from: 1, to: 3),
+		id_eq: Faker::Number.between(from: 5, to: 6),
+		id_org: 3
 	})
 end
 
@@ -117,7 +117,8 @@ end
 		dt_inicial: Faker::Date.between(from: 2.days.ago, to: Date.today),
 		dt_final: Faker::Date.between(from: Date.today, to: 1.month.from_now),
 		id_proj: Faker::Number.between(from: 1, to: 3),
-		id_org: 1
+		id_org: 1,
+		id_eq: Faker::Number.between(from: 1, to: 2)
 	})
 end
 
@@ -130,7 +131,8 @@ end
 		dt_inicial: Faker::Date.between(from: 2.days.ago, to: Date.today),
 		dt_final: Faker::Date.between(from: Date.today, to: 1.month.from_now),
 		id_proj: Faker::Number.between(from: 4, to: 6),
-		id_org: 2
+		id_org: 2,
+		id_eq: Faker::Number.between(from: 3, to: 4)
 	})
 end
 
@@ -143,6 +145,7 @@ end
 		dt_inicial: Faker::Date.between(from: 2.days.ago, to: Date.today),
 		dt_final: Faker::Date.between(from: Date.today, to: 1.month.from_now),
 		id_proj: Faker::Number.between(from: 7, to: 9),
-		id_org: 3
+		id_org: 3,
+		id_eq: Faker::Number.between(from: 5, to: 6)
 	})
 end

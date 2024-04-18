@@ -5,4 +5,5 @@ class Equipe < ApplicationRecord
     belongs_to :organizacao, foreign_key: 'id_org'
     has_many :participante
     has_many :projeto
+    has_many :atividade
 end

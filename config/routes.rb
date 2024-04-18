@@ -19,8 +19,13 @@ Rails.application.routes.draw do
   root "api/v1/organizacoes#index"
 
   get 'api/v1/activity_done/:id', to: 'api/v1/atividades#activity_done'
+
   get 'api/v1/project_done/:id', to: 'api/v1/projetos#project_done'
-  get 'api/v1/rel_project_activities_by_team', to: 'api/v1/projetos#rel_project_activities_by_team'
+
+  get 'api/v1/project_activities_ordered_by_priority/:id', to: 'api/v1/projetos#project_activities_ordered_by_priority'
+
   get 'api/v1/rel_projects_by_team_and_organization', to: 'api/v1/organizacoes#rel_projects_by_team_and_organization'
-  get 'api/v1/rel_activities_until_date_by_project_team_organization/:end_date', to: 'api/v1/organizacoes#rel_activities_until_date_by_project_team_organization'
+  get 'api/v1/activities_with_true_status_by_organization_and_team', to: 'api/v1/organizacoes#activities_with_true_status_by_organization_and_team'
+  get 'api/v1/activities_with_false_status_by_organization_and_team', to: 'api/v1/organizacoes#activities_with_false_status_by_organization_and_team'
+  get 'api/v1/projects_with_completion_percentage_by_organization/:id', to: 'api/v1/organizacoes#projects_with_completion_percentage_by_organization'
 end

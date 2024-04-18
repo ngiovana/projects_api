@@ -9,6 +9,7 @@ class CreateAtividades < ActiveRecord::Migration[7.1]
       t.boolean :status
       t.integer :id_proj
       t.integer :id_org
+      t.integer :id_eq
 
       t.timestamps
     end

@@ -62,43 +62,23 @@ module Api
 				else 
 					render json: {status: 'ERROR', message:'Para concluir o projeto, todas as atividades do mesmo devem estar concluídas', data: projeto}
 				end
-			end
+			end		
 			
-			# def rel_project_activities_by_team
-			# 	atividades_por_equipe = Atividade.joins(:projeto)
-            #                       .joins("INNER JOIN equipes ON projetos.id_eq = equipes.id")
-            #                       .select("equipes.nome AS nome_equipe, atividades.*")
-            #                       .group("equipes.id, atividades.id")
+			# Atividades do projeto ordenadas por prioridade
+			def project_activities_ordered_by_priority(params_project_id = '')
+				project_id = params_project_id.present? ? params_project_id : params[:id]
 
-			# 	atividades_por_equipe.each do |atividade|
-			# 		puts "Equipe: #{atividade.nome_equipe}"
-			# 		puts "  Título: #{atividade.titulo}, Descrição: #{atividade.descricao}"
-			# 	end
+				activities = Atividade.where(id_proj: project_id).order(:prioridade)
 
-			# 	render json: {status: 'ERROR', message:'Para concluir o projeto, todas as atividades do mesmo devem estar concluídas', data: projeto}
-			# end
-
-			def rel_project_activities_by_team
-				atividades_por_equipe = Atividade.joins(:projeto)
-												  .joins("INNER JOIN equipes ON projetos.id_eq = equipes.id")
-												  .select("equipes.nome AS nome_equipe, atividades.*")
-												  .group("equipes.id, atividades.id")
-			  
-				atividades_por_equipe_hash = {}
-			  
-				atividades_por_equipe.each do |atividade|
-				  equipe_id = atividade["id_eq"]
-
-				  atividades_por_equipe_hash[equipe_id] ||= { equipe: atividade["nome_equipe"], atividades: [] }
-				  atividades_por_equipe_hash[equipe_id][:atividades] << { 
-					id: atividade["id"], 
-					titulo: atividade["titulo"], 
-					descricao: atividade["descricao"] 
-				  }
+				if params_project_id.present? 
+					activities.each do |activity|
+						puts "Título: #{activity.titulo}, Prioridade: #{activity.prioridade}"
+					end
+				else
+					render json: { status: 'SUCCESS', message: 'Atividades do projeto ordenadas por prioridade', data: activities }
 				end
+			end
 			  
-				render json: { status: 'SUCCESS', message: 'Atividades por equipe', data: atividades_por_equipe_hash.values }
-			  end
 			
 			private
 
