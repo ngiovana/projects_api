@@ -45,7 +45,7 @@ module Api
 
 			# Parametros aceitos
 			def projeto_params
-				params.permit(:titulo, :descricao, :status, :nivel, :prazo_inicial, :prazo_final)
+				params.permit(:titulo, :descricao, :status, :nivel, :prazo_inicial, :prazo_final, :id_org, :id_eq)
 			end
 		end
 	end

@@ -1,5 +1,5 @@
 class Participante < ApplicationRecord
-    validates :email, presence: true, uniqueness: true
+    validates :email, presence: true
     validates :cargo, presence: true
     validates :nome, presence: true
     validates :senha, presence: true

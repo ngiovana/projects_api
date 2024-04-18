@@ -45,7 +45,7 @@ module Api
 
 			# Parametros aceitos
 			def participante_params
-				params.permit(:nome, :email, :senha, :cargo)
+				params.permit(:nome, :email, :senha, :cargo, :id_eq, :id_org)
 			end
 		end
 	end

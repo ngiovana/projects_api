@@ -5,11 +5,11 @@ class CreateParticipantes < ActiveRecord::Migration[7.1]
       t.integer :cargo
       t.string :nome
       t.string :senha
-      # t.integer :id_eq
-      # t.integer :id_org
+      t.integer :id_eq
+      t.integer :id_org
 
       t.timestamps
     end
-    add_index :participantes, :email, unique: true
+    # add_index :participantes, :email, unique: true
   end
 end

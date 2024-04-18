@@ -45,7 +45,7 @@ module Api
 
 			# Parametros aceitos
 			def equipe_params
-				params.permit(:nome, :nivel)
+				params.permit(:nome, :nivel, :id_org)
 			end
 		end
 	end

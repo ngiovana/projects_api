@@ -7,7 +7,8 @@ class CreateAtividades < ActiveRecord::Migration[7.1]
       t.date :dt_final
       t.integer :prioridade
       t.boolean :status
-      # t.integer :id_proj
+      t.integer :id_proj
+      t.integer :id_org
 
       t.timestamps
     end

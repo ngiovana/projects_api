@@ -45,7 +45,7 @@ module Api
 
 			# Parametros aceitos
 			def atividade_params
-				params.permit(:titulo, :descricao, :status, :prioridade, :dt_inicial, :dt_final)
+				params.permit(:titulo, :descricao, :status, :prioridade, :dt_inicial, :dt_final, :id_org, :id_proj)
 			end
 		end
 	end

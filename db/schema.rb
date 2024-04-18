@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_16_232043) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_18_023351) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_232043) do
     t.integer "prioridade"
     t.boolean "status"
     t.integer "id_proj"
+    t.integer "id_org"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,8 +31,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_232043) do
     t.string "nome"
     t.integer "nivel"
     t.integer "id_org"
-    t.integer "id_part"
-    t.integer "id_proj"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,11 +47,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_232043) do
     t.integer "cargo"
     t.string "nome"
     t.string "senha"
-    t.integer "id_ed"
+    t.integer "id_eq"
     t.integer "id_org"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_participantes_on_email", unique: true
   end
 
   create_table "projetos", force: :cascade do |t|
@@ -64,9 +62,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_232043) do
     t.integer "nivel"
     t.integer "id_org"
     t.integer "id_eq"
-    t.integer "id_ativ"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "atividades", "organizacaos", column: "id_org"
+  add_foreign_key "atividades", "projetos", column: "id_proj"
+  add_foreign_key "equipes", "organizacaos", column: "id_org"
+  add_foreign_key "participantes", "equipes", column: "id_eq"
+  add_foreign_key "participantes", "organizacaos", column: "id_org"
+  add_foreign_key "projetos", "equipes", column: "id_eq"
+  add_foreign_key "projetos", "organizacaos", column: "id_org"
 end
