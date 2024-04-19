@@ -11921,3 +11921,342 @@ Processing by Api::V1::ProjetosController#project_activities_ordered_by_priority
 Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 3.1ms | Allocations: 5162)
 
 
+  [1m[36mOrganizacao Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "organizacaos" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:9:in `index'
+  [1m[36mOrganizacao Load (0.8ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:11:in `index'
+  [1m[36mOrganizacao Load (0.3ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 ORDER BY "organizacaos"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:24:in `show'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:42:in `create'
+  [1m[36mOrganizacao Create (3.1ms)[0m  [1m[32mINSERT INTO "organizacaos" ("nome", "descricao", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Nome 1"], ["descricao", "teste"], ["created_at", "2024-04-18 21:36:05.804051"], ["updated_at", "2024-04-18 21:36:05.804051"]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:42:in `create'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:42:in `create'
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mOrganizacao Destroy (11.1ms)[0m  [1m[31mDELETE FROM "organizacaos" WHERE "organizacaos"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:68:in `destroy'
+  [1m[36mOrganizacao Load (0.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:73:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:75:in `update'
+  [1m[36mOrganizacao Update (2.3ms)[0m  [1m[33mUPDATE "organizacaos" SET "nome" = $1, "descricao" = $2, "updated_at" = $3 WHERE "organizacaos"."id" = $4[0m  [["nome", "Nome editado"], ["descricao", "descriçao editada"], ["updated_at", "2024-04-18 21:37:00.406842"], ["id", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:75:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:75:in `update'
+  [1m[36mOrganizacao Load (0.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 ORDER BY "organizacaos"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:24:in `show'
+Started GET "/api/v1/participantes" for ::1 at 2024-04-18 18:37:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ParticipantesController#index as */*
+  [1m[36mParticipante Load (3.7ms)[0m  [1m[34mSELECT "participantes".* FROM "participantes" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/participantes_controller.rb:8:in `index'
+Completed 200 OK in 336ms (Views: 81.1ms | ActiveRecord: 38.4ms | Allocations: 30022)
+
+
+Started GET "/api/v1/participantes/3" for ::1 at 2024-04-18 18:37:59 -0300
+Processing by Api::V1::ParticipantesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mParticipante Load (0.4ms)[0m  [1m[34mSELECT "participantes".* FROM "participantes" WHERE "participantes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:13:in `show'
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1364)
+
+
+Started POST "/api/v1/participantes" for ::1 at 2024-04-18 18:38:06 -0300
+Processing by Api::V1::ParticipantesController#create as */*
+  Parameters: {"nome"=>"participante", "email"=>"participante@email.com", "senha"=>"12345", "cargo"=>1, "id_org"=>1, "id_eq"=>1, "participante"=>{"email"=>"participante@email.com", "cargo"=>1, "nome"=>"participante", "senha"=>"12345", "id_eq"=>1, "id_org"=>1}}
+[31mUnpermitted parameter: :participante. Context: { controller: Api::V1::ParticipantesController, action: create, request: #<ActionDispatch::Request:0x00000191e2066060>, params: {"nome"=>"participante", "email"=>"participante@email.com", "senha"=>"12345", "cargo"=>1, "id_org"=>1, "id_eq"=>1, "controller"=>"api/v1/participantes", "action"=>"create", "participante"=>{"email"=>"participante@email.com", "cargo"=>1, "nome"=>"participante", "senha"=>"12345", "id_eq"=>1, "id_org"=>1}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/participantes_controller.rb:20:in `create'
+  [1m[36mOrganizacao Load (1.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:20:in `create'
+  [1m[36mEquipe Load (2.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:20:in `create'
+  [1m[36mParticipante Create (1.9ms)[0m  [1m[32mINSERT INTO "participantes" ("email", "cargo", "nome", "senha", "id_eq", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "participante@email.com"], ["cargo", 1], ["nome", "participante"], ["senha", "12345"], ["id_eq", 1], ["id_org", 1], ["created_at", "2024-04-18 21:38:06.714724"], ["updated_at", "2024-04-18 21:38:06.714724"]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/participantes_controller.rb:20:in `create'
+Completed 200 OK in 133ms (Views: 0.5ms | ActiveRecord: 33.0ms | Allocations: 16602)
+
+
+Started DELETE "/api/v1/participantes/31" for ::1 at 2024-04-18 18:38:15 -0300
+Processing by Api::V1::ParticipantesController#destroy as */*
+  Parameters: {"id"=>"31"}
+  [1m[36mParticipante Load (0.3ms)[0m  [1m[34mSELECT "participantes".* FROM "participantes" WHERE "participantes"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:29:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 544)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Participante with 'id'=31):
+  
+app/controllers/api/v1/participantes_controller.rb:29:in `destroy'
+Started DELETE "/api/v1/participantes/29" for ::1 at 2024-04-18 18:38:27 -0300
+Processing by Api::V1::ParticipantesController#destroy as */*
+  Parameters: {"id"=>"29"}
+  [1m[36mParticipante Load (0.4ms)[0m  [1m[34mSELECT "participantes".* FROM "participantes" WHERE "participantes"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/participantes_controller.rb:30:in `destroy'
+  [1m[36mParticipante Destroy (3.7ms)[0m  [1m[31mDELETE FROM "participantes" WHERE "participantes"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/participantes_controller.rb:30:in `destroy'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 4.8ms | Allocations: 1779)
+
+
+Started PUT "/api/v1/participantes/4" for ::1 at 2024-04-18 18:38:34 -0300
+Processing by Api::V1::ParticipantesController#update as */*
+  Parameters: {"nome"=>"participante editado", "email"=>"participante_editado@email.com", "senha"=>"12345", "cargo"=>1, "id"=>"4", "participante"=>{"email"=>"participante_editado@email.com", "cargo"=>1, "nome"=>"participante editado", "senha"=>"12345"}}
+  [1m[36mParticipante Load (0.4ms)[0m  [1m[34mSELECT "participantes".* FROM "participantes" WHERE "participantes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/participantes_controller.rb:36:in `update'
+[31mUnpermitted parameters: :id, :participante. Context: { controller: Api::V1::ParticipantesController, action: update, request: #<ActionDispatch::Request:0x00000191e21e8848>, params: {"nome"=>"participante editado", "email"=>"participante_editado@email.com", "senha"=>"12345", "cargo"=>1, "controller"=>"api/v1/participantes", "action"=>"update", "id"=>"4", "participante"=>{"email"=>"participante_editado@email.com", "cargo"=>1, "nome"=>"participante editado", "senha"=>"12345"}} }[0m
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 921)
+
+
+Started GET "/api/v1/equipes" for ::1 at 2024-04-18 18:38:43 -0300
+Processing by Api::V1::EquipesController#index as */*
+  [1m[36mEquipe Load (0.7ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 1202)
+
+
+Started GET "/api/v1/equipes/3" for ::1 at 2024-04-18 18:38:49 -0300
+Processing by Api::V1::EquipesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mEquipe Load (0.4ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 653)
+
+
+Started POST "/api/v1/equipes" for ::1 at 2024-04-18 18:38:54 -0300
+Processing by Api::V1::EquipesController#create as */*
+  Parameters: {"nome"=>"Uma Organizacao", "nivel"=>1, "id_org"=>1, "equipe"=>{"nome"=>"Uma Organizacao", "nivel"=>1, "id_org"=>1}}
+[31mUnpermitted parameter: :equipe. Context: { controller: Api::V1::EquipesController, action: create, request: #<ActionDispatch::Request:0x00000191dff28538>, params: {"nome"=>"Uma Organizacao", "nivel"=>1, "id_org"=>1, "controller"=>"api/v1/equipes", "action"=>"create", "equipe"=>{"nome"=>"Uma Organizacao", "nivel"=>1, "id_org"=>1}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:20:in `create'
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:20:in `create'
+  [1m[36mEquipe Create (0.9ms)[0m  [1m[32mINSERT INTO "equipes" ("nome", "nivel", "id_org", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Uma Organizacao"], ["nivel", 1], ["id_org", 1], ["created_at", "2024-04-18 21:38:54.358216"], ["updated_at", "2024-04-18 21:38:54.358216"]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:20:in `create'
+Completed 200 OK in 20ms (Views: 1.1ms | ActiveRecord: 2.5ms | Allocations: 3112)
+
+
+Started DELETE "/api/v1/equipes/7" for ::1 at 2024-04-18 18:38:59 -0300
+Processing by Api::V1::EquipesController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mEquipe Load (0.4ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:29:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 495)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Equipe with 'id'=7):
+  
+app/controllers/api/v1/equipes_controller.rb:29:in `destroy'
+Started DELETE "/api/v1/equipes/6" for ::1 at 2024-04-18 18:39:05 -0300
+Processing by Api::V1::EquipesController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mEquipe Load (0.4ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:30:in `destroy'
+  [1m[36mEquipe Destroy (6.6ms)[0m  [1m[31mDELETE FROM "equipes" WHERE "equipes"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:30:in `destroy'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 7.5ms | Allocations: 1801)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERRO:  atualização ou exclusão em tabela "equipes" viola restrição de chave estrangeira "fk_rails_d4b51f5e88" em "participantes"
+DETAIL:  Chave (id)=(6) ainda é referenciada pela tabela "participantes".
+):
+  
+Started DELETE "/api/v1/equipes/8" for ::1 at 2024-04-18 18:39:27 -0300
+Processing by Api::V1::EquipesController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mEquipe Load (0.4ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:30:in `destroy'
+  [1m[36mEquipe Destroy (9.0ms)[0m  [1m[31mDELETE FROM "equipes" WHERE "equipes"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/equipes_controller.rb:30:in `destroy'
+Completed 200 OK in 18ms (Views: 0.8ms | ActiveRecord: 10.2ms | Allocations: 1651)
+
+
+Started PUT "/api/v1/equipes/4" for ::1 at 2024-04-18 18:39:33 -0300
+Processing by Api::V1::EquipesController#update as */*
+  Parameters: {"nome"=>"Equipe editada", "descricao"=>"deu certo!", "id"=>"4", "equipe"=>{"nome"=>"Equipe editada"}}
+  [1m[36mEquipe Load (0.5ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/equipes_controller.rb:36:in `update'
+[31mUnpermitted parameters: :descricao, :id, :equipe. Context: { controller: Api::V1::EquipesController, action: update, request: #<ActionDispatch::Request:0x00000191e21a3a40>, params: {"nome"=>"Equipe editada", "descricao"=>"deu certo!", "controller"=>"api/v1/equipes", "action"=>"update", "id"=>"4", "equipe"=>{"nome"=>"Equipe editada"}} }[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 850)
+
+
+Started GET "/api/v1/projetos" for ::1 at 2024-04-18 18:39:42 -0300
+Processing by Api::V1::ProjetosController#index as */*
+  [1m[36mProjeto Load (0.8ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:8:in `index'
+Completed 200 OK in 67ms (Views: 47.4ms | ActiveRecord: 8.3ms | Allocations: 11463)
+
+
+Started GET "/api/v1/projetos/3" for ::1 at 2024-04-18 18:39:49 -0300
+Processing by Api::V1::ProjetosController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 714)
+
+
+Started POST "/api/v1/projetos" for ::1 at 2024-04-18 18:39:53 -0300
+Processing by Api::V1::ProjetosController#create as */*
+  Parameters: {"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "status"=>1, "nivel"=>1, "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "id_org"=>1, "id_eq"=>1, "projeto"=>{"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "status"=>1, "nivel"=>1, "id_org"=>1, "id_eq"=>1}}
+[31mUnpermitted parameter: :projeto. Context: { controller: Api::V1::ProjetosController, action: create, request: #<ActionDispatch::Request:0x00000191e22029f0>, params: {"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "status"=>1, "nivel"=>1, "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "id_org"=>1, "id_eq"=>1, "controller"=>"api/v1/projetos", "action"=>"create", "projeto"=>{"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "status"=>1, "nivel"=>1, "id_org"=>1, "id_eq"=>1}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:20:in `create'
+  [1m[36mOrganizacao Load (0.5ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:20:in `create'
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:20:in `create'
+  [1m[36mProjeto Create (1.4ms)[0m  [1m[32mINSERT INTO "projetos" ("titulo", "descricao", "prazo_inicial", "prazo_final", "status", "nivel", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["titulo", "Projeto um."], ["descricao", "Várias atividades"], ["prazo_inicial", "2024-01-01"], ["prazo_final", "2025-01-01"], ["status", true], ["nivel", 1], ["id_org", 1], ["id_eq", 1], ["created_at", "2024-04-18 21:39:54.038810"], ["updated_at", "2024-04-18 21:39:54.038810"]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:20:in `create'
+Completed 200 OK in 25ms (Views: 0.9ms | ActiveRecord: 3.0ms | Allocations: 4308)
+
+
+Started DELETE "/api/v1/projetos/11" for ::1 at 2024-04-18 18:39:59 -0300
+Processing by Api::V1::ProjetosController#destroy as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mProjeto Load (0.4ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:29:in `destroy'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms | Allocations: 511)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Projeto with 'id'=11):
+  
+app/controllers/api/v1/projetos_controller.rb:29:in `destroy'
+Started DELETE "/api/v1/projetos/10" for ::1 at 2024-04-18 18:40:05 -0300
+Processing by Api::V1::ProjetosController#destroy as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mProjeto Load (0.3ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:30:in `destroy'
+  [1m[36mProjeto Destroy (2.8ms)[0m  [1m[31mDELETE FROM "projetos" WHERE "projetos"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/projetos_controller.rb:30:in `destroy'
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 4.0ms | Allocations: 1712)
+
+
+Started PUT "/api/v1/projetos/4" for ::1 at 2024-04-18 18:40:11 -0300
+Processing by Api::V1::ProjetosController#update as */*
+  Parameters: {"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "status"=>1, "nivel"=>1, "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "id"=>"4", "projeto"=>{"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "status"=>1, "nivel"=>1}}
+  [1m[36mProjeto Load (0.5ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:36:in `update'
+[31mUnpermitted parameters: :id, :projeto. Context: { controller: Api::V1::ProjetosController, action: update, request: #<ActionDispatch::Request:0x00000191e234bd70>, params: {"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "status"=>1, "nivel"=>1, "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "controller"=>"api/v1/projetos", "action"=>"update", "id"=>"4", "projeto"=>{"titulo"=>"Projeto um.", "descricao"=>"Várias atividades", "prazo_inicial"=>"01/01/2024", "prazo_final"=>"01/01/2025", "status"=>1, "nivel"=>1}} }[0m
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 1050)
+
+
+Started GET "/api/v1/atividades" for ::1 at 2024-04-18 18:40:20 -0300
+Processing by Api::V1::AtividadesController#index as */*
+  [1m[36mAtividade Load (0.8ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" ORDER BY created_at DESC[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:8:in `index'
+Completed 200 OK in 74ms (Views: 56.7ms | ActiveRecord: 6.1ms | Allocations: 13636)
+
+
+Started GET "/api/v1/atividades/3" for ::1 at 2024-04-18 18:40:26 -0300
+Processing by Api::V1::AtividadesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mAtividade Load (0.4ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:13:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 721)
+
+
+Started POST "/api/v1/atividades" for ::1 at 2024-04-18 18:40:31 -0300
+Processing by Api::V1::AtividadesController#create as */*
+  Parameters: {"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "status"=>true, "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "prioridade"=>1, "id_proj"=>1, "id_org"=>1, "id_eq"=>1, "atividade"=>{"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "prioridade"=>1, "status"=>true, "id_proj"=>1, "id_org"=>1, "id_eq"=>1}}
+[31mUnpermitted parameter: :atividade. Context: { controller: Api::V1::AtividadesController, action: create, request: #<ActionDispatch::Request:0x00000191e21c87a0>, params: {"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "status"=>true, "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "prioridade"=>1, "id_proj"=>1, "id_org"=>1, "id_eq"=>1, "controller"=>"api/v1/atividades", "action"=>"create", "atividade"=>{"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "prioridade"=>1, "status"=>true, "id_proj"=>1, "id_org"=>1, "id_eq"=>1}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:20:in `create'
+  [1m[36mProjeto Load (0.9ms)[0m  [1m[34mSELECT "projetos".* FROM "projetos" WHERE "projetos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:20:in `create'
+  [1m[36mOrganizacao Load (0.4ms)[0m  [1m[34mSELECT "organizacaos".* FROM "organizacaos" WHERE "organizacaos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:20:in `create'
+  [1m[36mEquipe Load (0.3ms)[0m  [1m[34mSELECT "equipes".* FROM "equipes" WHERE "equipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:20:in `create'
+  [1m[36mAtividade Create (2.3ms)[0m  [1m[32mINSERT INTO "atividades" ("titulo", "descricao", "dt_inicial", "dt_final", "prioridade", "status", "id_proj", "id_org", "id_eq", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["titulo", "Atividade um."], ["descricao", "Muitas tarefas"], ["dt_inicial", "2024-01-01"], ["dt_final", "2025-01-01"], ["prioridade", 1], ["status", true], ["id_proj", 1], ["id_org", 1], ["id_eq", 1], ["created_at", "2024-04-18 21:40:31.360602"], ["updated_at", "2024-04-18 21:40:31.360602"]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:20:in `create'
+Completed 200 OK in 34ms (Views: 0.9ms | ActiveRecord: 4.7ms | Allocations: 5217)
+
+
+Started DELETE "/api/v1/atividades/32" for ::1 at 2024-04-18 18:40:39 -0300
+Processing by Api::V1::AtividadesController#destroy as */*
+  Parameters: {"id"=>"32"}
+  [1m[36mAtividade Load (0.3ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:30:in `destroy'
+  [1m[36mAtividade Destroy (3.0ms)[0m  [1m[31mDELETE FROM "atividades" WHERE "atividades"."id" = $1[0m  [["id", 32]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:30:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/atividades_controller.rb:30:in `destroy'
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 4.1ms | Allocations: 1717)
+
+
+Started PUT "/api/v1/atividades/4" for ::1 at 2024-04-18 18:40:49 -0300
+Processing by Api::V1::AtividadesController#update as */*
+  Parameters: {"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "status"=>false, "prioridade"=>1, "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "id_proj"=>1, "id_org"=>1, "id"=>"4", "atividade"=>{"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "prioridade"=>1, "status"=>false, "id_proj"=>1, "id_org"=>1}}
+  [1m[36mAtividade Load (0.4ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/atividades_controller.rb:36:in `update'
+[31mUnpermitted parameters: :id, :atividade. Context: { controller: Api::V1::AtividadesController, action: update, request: #<ActionDispatch::Request:0x00000191e1c84618>, params: {"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "status"=>false, "prioridade"=>1, "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "id_proj"=>1, "id_org"=>1, "controller"=>"api/v1/atividades", "action"=>"update", "id"=>"4", "atividade"=>{"titulo"=>"Atividade um.", "descricao"=>"Muitas tarefas", "dt_inicial"=>"01/01/2024", "dt_final"=>"01/01/2025", "prioridade"=>1, "status"=>false, "id_proj"=>1, "id_org"=>1}} }[0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1036)
+
+
+  [1m[36mAtividade Load (1.6ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", true]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:100:in `activities_with_true_status_by_organization_and_team'
+  [1m[36mAtividade Load (1.1ms)[0m  [1m[34mSELECT atividades.id_org AS organizacao_id, atividades.id_eq AS equipe_id,
+																	   COUNT(atividades.id) AS total_atividades,
+																	   MAX(atividades.titulo) AS titulo_atividade,
+																	   MAX(equipes.nome) AS nome_equipe FROM "atividades" INNER JOIN "projetos" ON "projetos"."id" = "atividades"."id_proj" INNER JOIN "equipes" ON "equipes"."id" = "atividades"."id_eq" WHERE "atividades"."status" = $1 GROUP BY atividades.id_org, atividades.id_eq[0m  [["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:149:in `activities_with_false_status_by_organization_and_team'
+  [1m[36mProjeto Load (0.8ms)[0m  [1m[34mSELECT equipes.nome AS nome_equipe, organizacaos.nome AS nome_organizacao, projetos.* FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" INNER JOIN "organizacaos" ON "organizacaos"."id" = "projetos"."id_org"[0m
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:235:in `rel_projects_by_team_and_organization'
+  [1m[36mProjeto Load (0.8ms)[0m  [1m[34mSELECT projetos.id AS projeto_id, projetos.titulo AS projeto_titulo,
+													equipes.id AS equipe_id, equipes.nome AS equipe_nome FROM "projetos" INNER JOIN "equipes" ON "equipes"."id" = "projetos"."id_eq" WHERE "projetos"."id_org" = $1[0m  [["id_org", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:193:in `group_by'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 1], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 3], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 3]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 2], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 2]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1 AND "atividades"."status" = $2[0m  [["id_proj", 12], ["status", false]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:201:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "atividades" WHERE "atividades"."id_proj" = $1[0m  [["id_proj", 12]]
+  ↳ app/controllers/api/v1/organizacoes_controller.rb:202:in `block (2 levels) in projects_with_completion_percentage_by_organization'
+  [1m[36mAtividade Load (0.5ms)[0m  [1m[34mSELECT "atividades".* FROM "atividades" WHERE "atividades"."id_proj" = $1 ORDER BY "atividades"."prioridade" ASC[0m  [["id_proj", 1]]
+  ↳ app/controllers/api/v1/projetos_controller.rb:74:in `project_activities_ordered_by_priority'
