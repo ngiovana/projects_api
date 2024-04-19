@@ -80,6 +80,9 @@ A API também contém relatórios que facilitam a consulta de informações deta
 - [Ruby on Rails](https://rubyinstaller.org/downloads)
 - [PostgreSQL](https://www.postgresql.org/download/windows/)
 
+### Banco de dados
+Na pasta **backup** se encontram os arquivos de backup do banco de dados e a collection que pode ser usada no Postman.
+
 ### Instalação
 
 1. Clone o repositório:
